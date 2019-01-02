@@ -12,6 +12,10 @@ resource "aws_lambda_function" "test_lambda" {
   runtime = "${var.runtime}"
 
   role = "${aws_iam_role.lambda_exec.arn}"
+
+  environment {
+    variables = "${var.environment_vars}"
+  }
 }
 
 # IAM role which dictates what other AWS services the Lambda function

@@ -14,26 +14,21 @@
 
 variable "s3_bucket_name" {
   description = "S3 bucket containing the zipped Lambda function"
-  default = ""
 }
 
 variable "file_name" {
   description = "File name of zipped Lambda function"
-  default = ""
 }
 
 variable "function_name" {
   description = "File name of zipped Lambda function"
-  default = ""
 }
 variable "handler" {
   description = "Function entry point"
-  default = ""
 }
 
 variable "runtime" {
   description = "Runtime to run this Lambda"
-  default = ""
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
@@ -43,7 +38,9 @@ variable "runtime" {
 
 variable "environment_vars" {
   description = "Environment variables"
-  default = {}
+  default = {
+      foo = "bar"
+    }
 }
 variable "log_retention_in_days" {
     description = "Number of days to keep Cloudwatch logs for this function"
